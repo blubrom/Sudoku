@@ -351,6 +351,8 @@ void sauvegarde(int **grid){
       strcpy(fileName, nom);
       strcat(fileName, ".txt");
       newFile = fopen(fileName, "w");
+       // on a pas un réel controle sur la validité du nom, on assure juste que la sauvegarde sera bien réalisée dans un fichier
+      // (dont le nom ne sera pas forcément celui souhaité par l'utilisateur si le nom de fichier n'est pas valide)
       if(newFile == NULL)
         printf("nom de fichier non valide");
     }
